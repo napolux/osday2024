@@ -1,11 +1,14 @@
 ---
-import Head from '../components/Head.astro';
-const {pageTitle} = Astro.props;
+import Head from '../components/astro/Head.astro';
+import FullScreenToggle from '../components/astro/FullScreenToggle.astro';
+
+const { pageTitle, bg } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
   <Head pageTitle={pageTitle} />
-  <body>
+  <body class="w-screen h-screen p-16">
     <slot /> 
+    <FullScreenToggle />
   </body>
 </html>
