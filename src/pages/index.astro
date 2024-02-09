@@ -1,6 +1,7 @@
 ---
 import SlideLayout from "../layouts/SlideLayout.astro";
 import Hero from "../components/astro/Hero.astro";
+import Navigation from "../components/astro/Navigation.astro";
 
 const title = "Welcome";
 ---
@@ -9,4 +10,5 @@ const title = "Welcome";
   <Hero>
     10 secrets to still be a rockstar developer after 40 - #7 will surprise you!
   </Hero>
+  <Navigation prev="/" next="/about-me" />
 </SlideLayout>

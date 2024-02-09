@@ -1,0 +1,26 @@
+---
+import SlideLayout from "../layouts/SlideLayout.astro";
+import Title from "../components/astro/Title.astro";
+import Left from "../components/astro/Left.astro";
+import Quote from "../components/astro/Quote.astro";
+import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
+import Content from "../components/astro/Content.astro";
+import Navigation from "../components/astro/Navigation.astro";
+
+const title = "Ageism";
+---
+
+<SlideLayout pageTitle={title}>
+  <SlideLeftRight>
+    <Title>{title}</Title>
+    <Content>
+      <Left>
+        <Quote>
+          Ageism is bias against, discrimination towards, or bullying of
+          individuals and groups on the basis of their age.
+        </Quote>
+      </Left>
+    </Content>
+  </SlideLeftRight>
+  <Navigation prev="/about-you" next="/" />
+</SlideLayout>
