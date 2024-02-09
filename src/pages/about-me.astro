@@ -1,10 +1,38 @@
 ---
 import SlideLayout from "../layouts/SlideLayout.astro";
-import SlideTitle from "../components/astro/SlideTitle.astro";
+import Title from "../components/astro/Title.astro";
+import Left from "../components/astro/Left.astro";
+import Right from "../components/astro/Right.astro";
+import List from "../components/astro/List.astro";
+import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
+import Content from "../components/astro/Content.astro";
 
 const title = "About me";
 ---
 
 <SlideLayout pageTitle={title}>
-  <SlideTitle title={title} />
+  <SlideLeftRight>
+    <Title>{title}</Title>
+    <Content>
+      <Left>
+        <List>
+          <li>Francesco (everybody calls me Napo)</li>
+          <li>43 years old 😱</li>
+          <li>Married, no children, one dog 🐶</li>
+          <li>Staff Software Engineer @ sysdig 👨🏻‍💻</li>
+          <li>Founder @ fullremote.it ✉️</li>
+          <li>I don't drink alcohol</li>
+          <li>I'm not sponsored by adidas, I just like their hoodies</li>
+        </List>
+      </Left>
+      <Right>
+        <img
+          src="/images/me.jpg"
+          alt="a picture of Napo"
+          class="rounded-full"
+          width="450"
+        />
+      </Right>
+    </Content>
+  </SlideLeftRight>
 </SlideLayout>

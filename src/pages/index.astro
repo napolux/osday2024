@@ -1,10 +1,12 @@
 ---
 import SlideLayout from "../layouts/SlideLayout.astro";
-import SlideTitle from "../components/astro/SlideTitle.astro";
+import Hero from "../components/astro/Hero.astro";
 
-const title = "Welcome!";
+const title = "Welcome";
 ---
 
 <SlideLayout pageTitle={title}>
-  <SlideTitle title={title} />
+  <Hero>
+    10 secrets to still be a rockstar developer after 40 - #7 will surprise you!
+  </Hero>
 </SlideLayout>

@@ -1,0 +1,16 @@
+---
+import SlideLayout from "../layouts/SlideLayout.astro";
+import Hero from "../components/astro/Hero.astro";
+
+const title = "How do you do, fellow kids?";
+---
+
+<SlideLayout pageTitle={title}>
+  <Hero>{title}</Hero>
+  <img
+    src="/images/fellowkids.jpg"
+    alt={title}
+    class="rounded-full p-8"
+    width="450"
+  />
+</SlideLayout>
