@@ -1,0 +1,12 @@
+---
+import SlideLayout from "../layouts/SlideLayout.astro";
+import { KeyboardManager } from "../components/react/KeyboardManager";
+import Hero from "../components/astro/Hero.astro";
+
+const title = "I said to myself...";
+---
+
+<SlideLayout pageTitle={title}>
+  <div class="text-9xl">🤷‍♂️</div>
+  <KeyboardManager prev="/ageism" next="/" client:only />
+</SlideLayout>

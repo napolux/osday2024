@@ -1,5 +1,12 @@
+---
+const { link } = Astro.props;
+---
+
 <div class="text-4xl text-sky-950 leading-relaxed">
   <span class="font-serif text-4xl font-black">&ldquo;</span><span
     class="italic"><slot /></span
   ><span class="font-serif text-4xl font-black">&rdquo;</span>
 </div>
+<p class="py-4 text-sky-950 text-xl">
+  <a href={link} target="_blank">{link}</a>
+</p>

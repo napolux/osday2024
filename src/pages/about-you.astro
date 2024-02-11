@@ -1,20 +1,30 @@
 ---
 import SlideLayout from "../layouts/SlideLayout.astro";
-import Hero from "../components/astro/Hero.astro";
 import { KeyboardManager } from "../components/react/KeyboardManager";
+import Content from "../components/astro/Content.astro";
+import Left from "../components/astro/Left.astro";
+import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
+import Title from "../components/astro/Title.astro";
 
 const title = "How do you do, fellow kids?";
 ---
 
 <SlideLayout pageTitle={title}>
-  <Hero>{title}</Hero>
-  <img
-    src="/images/fellowkids.jpg"
-    alt={title}
-    class="rounded-full p-8"
-    width="450"
-    transition:name="pic"
-  />
-  <KeyboardManager prev="/about-me" next="/ageism" client:only />
+  <SlideLeftRight>
+    <Title>{title}</Title>
+    <Content>
+      <Left>
+        <div class="flex justify-center items-center">
+          <img
+            src="/images/fellowkids.jpg"
+            alt={title}
+            class="rounded-full"
+            width="450"
+            transition:name="pic"
+          />
+        </div>
+      </Left>
+    </Content>
+  </SlideLeftRight>
+  <KeyboardManager prev="/about-me" next="/article" client:only />
 </SlideLayout>
-../components/react/KeyboardManager
