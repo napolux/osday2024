@@ -6,7 +6,7 @@ import Right from "../components/astro/Right.astro";
 import List from "../components/astro/List.astro";
 import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
 import Content from "../components/astro/Content.astro";
-import Navigation from "../components/astro/Navigation.astro";
+import { Navigation } from "../components/react/Navigation";
 
 const title = "About me";
 ---
@@ -32,9 +32,10 @@ const title = "About me";
           alt="a picture of Napo"
           class="rounded-full"
           width="450"
+          transition:name="pic"
         />
       </Right>
     </Content>
   </SlideLeftRight>
-  <Navigation prev="/" next="/about-you" />
+  <Navigation prev="/" next="/about-you" client:only />
 </SlideLayout>

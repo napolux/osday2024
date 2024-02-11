@@ -1,7 +1,7 @@
 ---
 import SlideLayout from "../layouts/SlideLayout.astro";
 import Hero from "../components/astro/Hero.astro";
-import Navigation from "../components/astro/Navigation.astro";
+import { Navigation } from "../components/react/Navigation";
 
 const title = "How do you do, fellow kids?";
 ---
@@ -13,6 +13,7 @@ const title = "How do you do, fellow kids?";
     alt={title}
     class="rounded-full p-8"
     width="450"
+    transition:name="pic"
   />
-  <Navigation prev="/about-me" next="/ageism" />
+  <Navigation prev="/about-me" next="/ageism" client:only />
 </SlideLayout>
