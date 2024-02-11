@@ -6,12 +6,27 @@ interface NavigationProps {
   prev?: string;
 }
 
-export const Navigation = (props: NavigationProps) => {
+export const KeyboardManager = (props: NavigationProps) => {
   const { next, prev } = props;
+
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch((err) => {
+        console.error(
+          `Error attempting to enable full-screen mode: ${err.message}`
+        );
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       switch (event.key.toLowerCase()) {
+        case 'f':
+          toggleFullScreen();
+          break;
         case "arrowleft":
           navigate(prev ?? '/');
           break;
@@ -21,10 +36,7 @@ export const Navigation = (props: NavigationProps) => {
       }
     }
 
-    // Add event listener when component mounts
     window.addEventListener('keydown', handleKeyDown);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };

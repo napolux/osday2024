@@ -1,7 +1,7 @@
 ---
 import SlideLayout from "../layouts/SlideLayout.astro";
 import Hero from "../components/astro/Hero.astro";
-import { Navigation } from "../components/react/Navigation";
+import { KeyboardManager } from "../components/react/KeyboardManager";
 
 const title = "How do you do, fellow kids?";
 ---
@@ -15,5 +15,6 @@ const title = "How do you do, fellow kids?";
     width="450"
     transition:name="pic"
   />
-  <Navigation prev="/about-me" next="/ageism" client:only />
+  <KeyboardManager prev="/about-me" next="/ageism" client:only />
 </SlideLayout>
+../components/react/KeyboardManager

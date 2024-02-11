@@ -1,17 +1,16 @@
 ---
-import Head from '../components/astro/Head.astro';
-import FullScreenToggle from '../components/astro/FullScreenToggle.astro';
-import Container from '../components/astro/Container.astro';
+import Head from "../components/astro/Head.astro";
+import Container from "../components/astro/Container.astro";
 
-const { pageTitle, bg } = Astro.props;
+const { pageTitle } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <Head pageTitle={`${pageTitle} - Open Source Day 2024`} />
   <body class="bg-neutral-50">
     <Container>
-      <slot /> 
+      <slot />
     </Container>
-    <FullScreenToggle />
   </body>
 </html>
