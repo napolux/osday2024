@@ -6,31 +6,38 @@ interface NavigationProps {
   prev?: string;
 }
 
+const activateFullScreen = () => {
+  document.documentElement.requestFullscreen().catch((err) => {
+    console.error(
+      `Error attempting to enable full-screen mode: ${err.message}`
+    );
+  });
+};
+
+const exitFullScreen = () => document.exitFullscreen();
+
 export const KeyboardManager = (props: NavigationProps) => {
   const { next, prev } = props;
 
   const toggleFullScreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch((err) => {
-        console.error(
-          `Error attempting to enable full-screen mode: ${err.message}`
-        );
-      });
-    } else {
-      document.exitFullscreen();
-    }
+    (document.fullscreenElement) ? exitFullScreen() : activateFullScreen();
   };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       switch (event.key.toLowerCase()) {
+        case '.':
         case 'f':
           toggleFullScreen();
           break;
         case "arrowleft":
+        case "arrowup":
+        case "pageup":
           navigate(prev ?? '/');
           break;
         case "arrowright":
+        case "arrowdown":
+        case "pagedown":
           navigate(next ?? '/');
           break;
       }
