@@ -3291,12 +3291,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.0.11":
-  version: 9.0.11
-  resolution: "husky@npm:9.0.11"
+"husky@npm:^8.0.0":
+  version: 8.0.3
+  resolution: "husky@npm:8.0.3"
   bin:
-    husky: bin.mjs
-  checksum: 1aebc3334dc7ac6288ff5e1fb72cfb447cfa474e72cf7ba692e8c5698c573ab725c28c6a5088c9f8e6aca5f47d40fa7261beffbc07a4d307ca21656dc4571f07
+    husky: lib/bin.js
+  checksum: 837bc7e4413e58c1f2946d38fb050f5d7324c6f16b0fd66411ffce5703b294bd21429e8ba58711cd331951ee86ed529c5be4f76805959ff668a337dbfa82a1b0
   languageName: node
   linkType: hard
 
@@ -4922,7 +4922,7 @@ __metadata:
     "@types/react": ^18.2.55
     "@types/react-dom": ^18.2.18
     astro: ^4.3.4
-    husky: ^9.0.11
+    husky: ^8.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
     tailwindcss: ^3.4.1
