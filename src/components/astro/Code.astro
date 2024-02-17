@@ -1,1 +1,7 @@
-<code class="font-mono bg-slate-200"><slot /></code>
+---
+const { size } = Astro.props;
+---
+
+<code class="font-mono">
+  <pre class={`rounded-lg p-4 bg-slate-200 ${size}`}><slot /></pre>
+</code>
