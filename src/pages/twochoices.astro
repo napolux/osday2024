@@ -1,0 +1,36 @@
+---
+import SlideLayout from "../layouts/SlideLayout.astro";
+import Title from "../components/astro/Title.astro";
+import Left from "../components/astro/Left.astro";
+import List from "../components/astro/List.astro";
+import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
+import Content from "../components/astro/Content.astro";
+import { KeyboardManager } from "../components/react/KeyboardManager";
+import Code from "../components/astro/Code.astro";
+
+const title = "Two choices";
+---
+
+<SlideLayout pageTitle={title}>
+  <SlideLeftRight>
+    <Title><span class="line-through">Three</span> {title}</Title>
+    <Content>
+      <Left proportions="w-full">
+        <List>
+          <li>
+            Move to a different career:<br />
+            <Code>const possibleJobs = [🍕, 👨‍🌾, 🦙, 🐌, 👨🏻‍🏭, 🤿];</Code>
+          </li>
+          <li>
+            <span class="line-through">Move to management?</span> (more on this later)
+          </li>
+          <li>
+            Keep being the handsome, sweet, rockstar, <strong>humble</strong>
+            <br />developer I've always been
+          </li>
+        </List>
+      </Left>
+    </Content>
+  </SlideLeftRight>
+  <KeyboardManager prev="/whatcanido" next="/lazy" client:only />
+</SlideLayout>

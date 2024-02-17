@@ -1,0 +1,24 @@
+---
+import SlideLayout from "../layouts/SlideLayout.astro";
+import { KeyboardManager } from "../components/react/KeyboardManager";
+import Content from "../components/astro/Content.astro";
+import Left from "../components/astro/Left.astro";
+import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
+import Title from "../components/astro/Title.astro";
+
+const title = "Automation";
+---
+
+<SlideLayout pageTitle={title}>
+  <SlideLeftRight>
+    <Title>{title}</Title>
+    <Content>
+      <Left proportions="w-full">
+        <div class="flex justify-center items-center">
+          <img src="/images/automation.png" alt={title} transition:name="pic" />
+        </div>
+      </Left>
+    </Content>
+  </SlideLeftRight>
+  <KeyboardManager prev="/lazy" next="/stilldev" client:only />
+</SlideLayout>

@@ -1,5 +1,5 @@
 ---
-const { link } = Astro.props;
+const { link, source } = Astro.props;
 ---
 
 <div class="text-4xl text-sky-950 leading-relaxed">
@@ -7,6 +7,13 @@ const { link } = Astro.props;
     class="italic"><slot /></span
   ><span class="font-serif text-4xl font-black">&rdquo;</span>
 </div>
-<p class="py-4 text-sky-950 text-xl">
-  <a href={link} target="_blank">{link}</a>
-</p>
+{
+  link && (
+    <p class="py-4 text-sky-950 text-xl">
+      <a href={link} target="_blank">
+        {link}
+      </a>
+    </p>
+  )
+}
+{source && <p class="py-4 text-sky-950 text-2xl italic">{source}</p>}

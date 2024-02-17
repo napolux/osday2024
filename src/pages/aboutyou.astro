@@ -13,18 +13,18 @@ const title = "How do you do, fellow kids?";
   <SlideLeftRight>
     <Title>{title}</Title>
     <Content>
-      <Left>
+      <Left proportions="w-full">
         <div class="flex justify-center items-center">
           <img
             src="/images/fellowkids.jpg"
             alt={title}
             class="rounded-full"
-            width="450"
+            width="375"
             transition:name="pic"
           />
         </div>
       </Left>
     </Content>
   </SlideLeftRight>
-  <KeyboardManager prev="/about-me" next="/article" client:only />
+  <KeyboardManager prev="/aboutme" next="/article" client:only />
 </SlideLayout>

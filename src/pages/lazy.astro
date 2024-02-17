@@ -6,21 +6,25 @@ import Quote from "../components/astro/Quote.astro";
 import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
 import Content from "../components/astro/Content.astro";
 import { KeyboardManager } from "../components/react/KeyboardManager";
+import Right from "../components/astro/Right.astro";
 
-const title = "Ageism";
+const title = "Obviously, I'm a lazy programmer...";
 ---
 
 <SlideLayout pageTitle={title}>
   <SlideLeftRight>
     <Title>{title}</Title>
-    <Content transition:name="ageism">
+    <Content transition:name="lazy">
       <Left proportions="w-full">
-        <Quote link="https://en.wikipedia.org/wiki/Ageism">
-          Ageism is bias against, discrimination towards, or bullying of
-          individuals and groups on the basis of their age.
+        <Quote
+          link="http://thethreevirtues.com/"
+          source="Larry Wall, creator of the Perl programming language"
+        >
+          <strong>Laziness</strong>: The quality that makes you go to great
+          effort to reduce overall energy expenditure.
         </Quote>
       </Left>
     </Content>
   </SlideLeftRight>
-  <KeyboardManager prev="/rabbithole" next="/whatcanido" client:only />
+  <KeyboardManager prev="/twochoices" next="/automation" client:only />
 </SlideLayout>

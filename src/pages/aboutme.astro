@@ -1,0 +1,41 @@
+---
+import SlideLayout from "../layouts/SlideLayout.astro";
+import Title from "../components/astro/Title.astro";
+import Left from "../components/astro/Left.astro";
+import Right from "../components/astro/Right.astro";
+import List from "../components/astro/List.astro";
+import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
+import Content from "../components/astro/Content.astro";
+import { KeyboardManager } from "../components/react/KeyboardManager";
+
+const title = "About me";
+---
+
+<SlideLayout pageTitle={title}>
+  <SlideLeftRight>
+    <Title>{title}</Title>
+    <Content>
+      <Left proportions="w-2/3">
+        <List>
+          <li>Francesco (everybody call me Napo)</li>
+          <li>
+            43 years of experience in breaking stuff, online & offiline 😱
+          </li>
+          <li>Staff Software Engineer @ sysdig 👨🏻‍💻</li>
+          <li>Founder @ fullremote.it ✉️</li>
+          <li>Previously: eBay, Pirelli, entrepreneur</li>
+        </List>
+      </Left>
+      <Right proportions="w-1/3">
+        <img
+          src="/images/me.jpg"
+          alt="a picture of Napo"
+          class="rounded-full"
+          width="375"
+          transition:name="pic"
+        />
+      </Right>
+    </Content>
+  </SlideLeftRight>
+  <KeyboardManager prev="/" next="/aboutyou" client:only />
+</SlideLayout>

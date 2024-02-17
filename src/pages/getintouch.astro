@@ -8,34 +8,23 @@ import SlideLeftRight from "../components/astro/SlideLeftRight.astro";
 import Content from "../components/astro/Content.astro";
 import { KeyboardManager } from "../components/react/KeyboardManager";
 
-const title = "About me";
+const title = "Get in touch!!!";
 ---
 
 <SlideLayout pageTitle={title}>
   <SlideLeftRight>
     <Title>{title}</Title>
     <Content>
-      <Left>
+      <Left proportions="w-1/2">
         <List>
-          <li>Francesco (everybody calls me Napo)</li>
           <li>
-            43 years of experience in breaking stuff, online & offiline 😱
+            Move to a different career
           </li>
-          <li>Staff Software Engineer @ sysdig 👨🏻‍💻</li>
-          <li>Founder @ fullremote.it ✉️</li>
-          <li>I don't drink alcohol</li>
         </List>
       </Left>
-      <Right>
-        <img
-          src="/images/me.jpg"
-          alt="a picture of Napo"
-          class="rounded-full"
-          width="450"
-          transition:name="pic"
-        />
+      <Right proportions="w-1/2">
       </Right>
     </Content>
   </SlideLeftRight>
-  <KeyboardManager prev="/" next="/about-you" client:only />
+  <KeyboardManager prev="/whatcanido" next="/" client:only />
 </SlideLayout>

@@ -3,12 +3,12 @@ import SlideLayout from "../layouts/SlideLayout.astro";
 import Hero from "../components/astro/Hero.astro";
 import { KeyboardManager } from "../components/react/KeyboardManager";
 
-const title = "Welcome";
+const title = "Rabbit hole";
 ---
 
 <SlideLayout pageTitle={title}>
-  <Hero>
-    10 secrets to still be a rockstar developer after 40 - #7 will surprise you!
+  <Hero transition:name="lazy">
+    ...so I'm still a developer<br />at 43 years old
   </Hero>
-  <KeyboardManager prev="/" next="/aboutme" client:only />
+  <KeyboardManager prev="/lazy" next="/secrets" client:only />
 </SlideLayout>
