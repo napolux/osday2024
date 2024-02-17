@@ -27,7 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
-    "husky": "^9.0.10"
+    "husky": "^9.0.11"
   },
   "commitlint": {
     "extends": [
