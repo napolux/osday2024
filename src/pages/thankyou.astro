@@ -14,18 +14,24 @@ const title = "Thank you! Get in touch!";
     <Title>{title}</Title>
     <Content>
       <Left proportions="w-full">
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center flex-col">
           <img
             src="/images/qr.png"
             alt={title}
             width="375"
             transition:name="pic"
           />
-        </div>
-        <div class="flex justify-center items-center">
-          <a href="https://linktr.ee/napo.dev" class="text-4xl text-sky-950"
-            >https://linktr.ee/napo.dev</a
-          >
+
+          <p>
+            <a href="https://linktr.ee/napo.dev" class="text-4xl text-sky-950"
+              >https://linktr.ee/napo.dev</a
+            >
+          </p>
+          <p class="py-4">
+            <a href="https://osday2024.pages.dev" class="text-4xl text-sky-950"
+              >https://osday2024.pages.dev</a
+            >
+          </p>
         </div>
       </Left>
       <KeyboardManager prev="/secrets/10" next="/" client:only />
