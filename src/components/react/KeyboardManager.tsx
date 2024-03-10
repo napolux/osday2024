@@ -48,5 +48,10 @@ export const KeyboardManager = (props: NavigationProps) => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
-  return <></>;
+  return (
+    <div className="absolute top-0 right-0 p-4">
+      <a title="Previous slide" className="text-2xl" href={prev}>⬅️</a>&nbsp;
+      <a title="Next slide" className="text-2xl" href={next}>➡️</a>
+    </div>
+  );
 }
